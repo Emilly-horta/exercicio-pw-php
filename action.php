@@ -1,14 +1,31 @@
-<table class="table">
-    <tbody> 
+<html>
+<body>
+<?php
+    if (!empty($_POST["nome"])) {
+?>
+    <table class="table">
         <tr class="cinza">
-            <td><?php echo $nome = $_GET['nome']; ?><br></td>
-            <td><?php echo $date = $_GET['date']; ?><br></td>
-            <td><?php echo $adress = $_GET['adress']; ?><br></td>
-            <td><?php echo $CEP = $_GET['CEP']; ?><br></td>
-            <td><?php echo $phone = $_GET['phone']; ?><br></td>
-        <?php echo "Cadastrado com sucesso!"?> 
-        </td>
+            <thead>
+                <tr>
+                    <th scope="col">Name:</th>
+                    <th scope="col">birthday:</th>
+                    <th scope="col">Adress:</th>
+                    <th scope="col">CEP:</th>
+                    <th scope="col">Phone:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <td><?php echo $_POST['nome']?><br></td>
+                <td><?php echo $_POST['date'] ?><br></td>
+                <td><?php echo $_POST['adress'] ?><br></td>
+                <td><?php echo $_POST['CEP'] ?><br></td>
+                <td><?php echo $_POST['phone'] ?><br></td>
+                <p style="color: red;"><?php echo "Cadastrado com sucesso!" ?></p>
+                </td>
         </tr>
-    </tbody>
-</table>
+        </tbody>
+    </table>
+</body>
+<?php } ?>
+</html>
     
